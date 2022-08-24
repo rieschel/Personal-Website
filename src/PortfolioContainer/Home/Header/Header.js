@@ -19,7 +19,7 @@ function Header(props) {
   };
 
   let currentScreenSubscription =
-    ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
+    ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
     return TOTAL_SCREENS.map((screen, i) => (

@@ -4,7 +4,7 @@ import { Subject } from "rxjs";
 export default class ScrollService {
   static scrollHandler = new ScrollService();
 
-  static currentScreenBroadCaster = new Subject();
+  static currentScreenBroadcaster = new Subject();
   static currentScreenFadeIn = new Subject();
 
   constructor() {
@@ -12,7 +12,7 @@ export default class ScrollService {
   }
 
   scrollToHireMe = () => {
-    let contactMeScreen = document.getElementById("Contact Me");
+    let contactMeScreen = document.getElementById("ContactMe");
     if (!contactMeScreen) return;
     contactMeScreen.scrollIntoView({ behavior: "smooth" });
   };
@@ -26,7 +26,7 @@ export default class ScrollService {
   isElementInView = (elem, type) => {
     let rec = elem.getBoundingClientRect();
     let elementTop = rec.top;
-    let elementBottom = rec.Bottom;
+    let elementBottom = rec.bottom;
 
     let partiallyVisible =
       elementTop < window.innerHeight && elementBottom >= 0;
@@ -63,7 +63,7 @@ export default class ScrollService {
         }
 
         if (fullyVisible) {
-          ScrollService.currentScreenBroadCaster.next({
+          ScrollService.currentScreenBroadcaster.next({
             screenInView: screen.screen_name,
           });
           break;

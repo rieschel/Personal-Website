@@ -1,5 +1,6 @@
 import React from "react";
 import Typical from "react-typical";
+import ScrollService from "../../../utilities/ScrollService";
 import "./Profile.css";
 
 function Profile(props) {
@@ -17,6 +18,9 @@ function Profile(props) {
               </a>
               <a href="https://github.com/rieschel">
                 <i className="fa fa-github-square fa-3x"></i>
+              </a>
+              <a href="mailto: emilia.rieschel@gmail.com">
+                <i className="fa fa-envelope fa-3x"></i>
               </a>
             </div>
           </div>
@@ -55,7 +59,6 @@ function Profile(props) {
             </span>
           </div>
           <div className="profile-options">
-            <button className="btn primary-btn"> Hire Me </button>
             <a href="CV - Emilia Rieschel.pdf" download="Emilia Rieschel.pdf">
               <button className="btn highlighted-btn">Get Resume</button>
             </a>

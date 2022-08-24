@@ -6,7 +6,7 @@ import "./AboutMe.css";
 
 function AboutMe(props) {
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
+    if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
 
@@ -39,7 +39,10 @@ function AboutMe(props) {
   };
 
   return (
-    <div className="about-me-container screen-container" id={props.id || ""}>
+    <div
+      className="about-me-container screen-container fade-in"
+      id={props.id || ""}
+    >
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
         <div className="about-me-card">
@@ -55,7 +58,6 @@ function AboutMe(props) {
               {renderHighlight()}
             </div>
             <div className="about-me-options">
-              <button className="btn primary-btn"> Hire Me </button>
               <a href="CV - Emilia Rieschel.pdf" download="Emilia Rieschel.pdf">
                 <button className="btn highlighted-btn">Get Resume</button>
               </a>

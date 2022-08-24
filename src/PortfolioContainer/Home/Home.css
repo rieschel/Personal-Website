@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 670px;
-  background-image: url("../../assets/Home/blue2.jpg");
+  /* background-image: url("../../assets/Home/blue2.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  /*background-color: rgb(39, 39, 78);*/
+  background: rgb(2,0,36);
+  background: linear-gradient(133deg, rgba(2,0,36,1) 31%, rgba(9,9,121,1) 68%, rgba(0,126,255,1) 100%);
 }
